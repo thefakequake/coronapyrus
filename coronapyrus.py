@@ -4,10 +4,7 @@ import random
 from subprocess import call
 
 def create_string():
-    output = ''
-    for i in range(random.randint(5, 20)):
-        output += random.choice(string.ascii_letters)
-    return output
+    return random.choice(string.ascii_letters) for x in range(random.randint(5, 20))]
 
 with open(__file__, 'r') as file:
     data = file.read()
